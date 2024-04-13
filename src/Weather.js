@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 
 export default function Weather(props){
@@ -16,11 +17,12 @@ export default function Weather(props){
         description: response.data.condition.description,
         pressure: response.data.temperature.pressure,
         city: response.data.city,
-        icon: "https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+        icon: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+        date: new Date(response.data.time *1000)
 
        });
        setLoad(true);
-        console.log(response.data);
+       console.log(response.data)
      
     
     }
@@ -38,10 +40,7 @@ export default function Weather(props){
         <div className="row mt-5">
             <div className="col-sm-4 text-center">
                 <h2 className="text-capitalize">{weather.city}</h2>
-                <p>
-                    Wednesday
-                </p>
-                <h1>12:45</h1>
+               <FormattedDate date={weather.date}/>
                 <p className="text-capitalize">{weather.description}</p>
             
             </div>
@@ -68,12 +67,13 @@ export default function Weather(props){
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.city}&key=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
     return "Loading";
+    return "Loading";
+
+        
+    return "Loading";    
 
         
     }
- 
-   
-
-    }
+}
    
    
