@@ -18,11 +18,12 @@ export default function Weather(props){
         humidity: response.data.temperature.humidity,
         description: response.data.condition.description,
         pressure: response.data.temperature.pressure,
-        icon: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+        icon: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
         date: new Date(response.data.time *1000)
 
        });
        setLoad(true);
+       console.log(response.data)
     }
 
     function search(){
