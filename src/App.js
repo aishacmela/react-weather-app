@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <div className='container'>
   
-      <Weather city="polokwane"/>
+      <Weather defaultCity={"Pretoria"}/>
 
       <footer>
         this page was coded by aisha and it is <a href='https://github.com/aishacmela/react-weather-app' target='_blank'>open-sourced</a> on Github
