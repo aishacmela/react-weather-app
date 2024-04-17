@@ -23,7 +23,6 @@ export default function Weather(props){
 
        });
        setLoad(true);
-       console.log(response.data)
     }
 
     function search(){
