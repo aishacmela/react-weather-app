@@ -8,10 +8,13 @@ function App() {
       <div className='container'>
   
       <Weather defaultCity={"Pretoria"}/>
-
-      <footer>
-        this page was coded by aisha and it is <a href='https://github.com/aishacmela/react-weather-app' target='_blank'>open-sourced</a> on Github
-      </footer>
+        <footer>
+  This page was coded by Aisha and it is 
+  <a href='https://github.com/aishacmela/react-weather-app' target='_blank' rel='noopener noreferrer'>
+    open-sourced
+  </a>
+  on GitHub
+    </footer>
       </div>
     </div>
   );
