@@ -9,14 +9,14 @@ function App() {
   
       <Weather defaultCity={"Pretoria"}/>
         <footer>
-  This page was coded by Aisha and it is 
+  This page was coded by Aisha and it is  
   <a href='https://github.com/aishacmela/react-weather-app' target='_blank' rel='noopener noreferrer'>
     open-sourced
   </a>
   on GitHub
     </footer>
-      </div>
     </div>
+  </div>
   );
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import CityTemperature from "./CityTemperature.js";
+import WeatherForecast from "./WeatherForecast.js";
 
 export default function WeatherInfo(props){
    return(
@@ -22,8 +23,8 @@ export default function WeatherInfo(props){
                     <li>Wind: <strong>{props.data.wind} km/hr</strong> </li>
                 </ul>
                 <CityTemperature celsius={props.data.temperature}/>
-
             </div>
+                <WeatherForecast />
         </div>
 </div>
    );
